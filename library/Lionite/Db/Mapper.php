@@ -9,8 +9,7 @@
  * @author     Eran Galperin
  * @copyright  Eran Galperin All rights reserved
  */
-class Lionite_Db_Mapper 
-{
+class Lionite_Db_Mapper {
 	const ADAPTER = 'db';
 	const TABLE = 'table';
 	const MAP = 'map';
