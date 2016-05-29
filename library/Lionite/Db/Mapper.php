@@ -396,8 +396,7 @@ class Lionite_Db_Mapper
 	 * @param string $type Join type
 	 * @return self / boolean $this object on success, false on failure
 	 */
-	public function by($rule,$cols = array('*'),$type = 'join',$extraClause = null)
-	{
+	public function by($rule,$cols = array('*'),$type = 'join',$extraClause = null)	{
 		$ref = $this -> _parseRule($rule,self::THIS);
 		if($this -> _joinByRule($ref,$cols,$type,$extraClause) === false){
 			throw new Lionite_Db_Exception('Join on rule "' . $rule . "' failed");
@@ -416,14 +415,14 @@ class Lionite_Db_Mapper
 	 * @param string $type Join type
 	 * @return self / boolean $this object on success, false on failure
 	 */
-	public function with($rule,$cols = array('*'),$type = 'join',$extraClause = null)
-	{
+	public function with($rule,$cols = array('*'),$type = 'join',$extraClause = null) {
 		$ref = $this -> _parseRule($rule,self::LASTJOINED);
 		if($this -> _joinByRule($ref,$cols,$type,$extraClause) === false){
 			throw new Zend_Db_Exception('Join on rule "' . $rule . "' failed");
 		}
 		return $this;
 	}
+	
 	/**
 	 * Join by reference rule
 	 *
